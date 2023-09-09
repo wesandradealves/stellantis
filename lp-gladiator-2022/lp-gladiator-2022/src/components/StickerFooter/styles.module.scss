@@ -1,0 +1,35 @@
+@use "../../styles/variables" as var;
+
+.container {
+  display: none;
+}
+
+@media only screen and (max-width: 770px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+    background-color: var.$brown2B2;
+    position: fixed;
+    bottom: -100px; left: 0; right: 0;
+    z-index: 100;
+    justify-content: space-between;
+    gap: 10px;
+    display: inline-flex;
+    transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &.show {
+      bottom: 0;
+    }
+
+    .button {
+      margin-left: 0;
+      flex: 1 1 calc(100% - 10px);
+      
+      a{
+        margin-bottom: 0;
+      }
+
+      width: 100%;
+    }
+  }
+}

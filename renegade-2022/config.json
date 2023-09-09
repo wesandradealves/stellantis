@@ -1,0 +1,21 @@
+﻿{
+  "projects": [
+    {
+      "server": {
+        "type": "nginx",
+        "language": {
+          "type": "node"
+        }
+      },
+      "external-access": [
+        {
+          "user": "alkylvai",
+          "pass": "VlcAg6lvQvab52V7!"
+        }
+      ],
+      "folder": "lp-renegade-2022/",
+      "slug": "lp-renegade-2022",
+      "render": "server-side"
+    }
+  ]
+}

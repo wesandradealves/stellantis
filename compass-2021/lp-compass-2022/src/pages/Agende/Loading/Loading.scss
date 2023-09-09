@@ -1,0 +1,58 @@
+.Loading {
+	@include relative;
+	@include size(100px);
+
+	.is-mobile & {
+		@include size(50px);
+	}
+
+	.is-mobile & svg {
+		@include size(calc(100% - 14px) calc(100% - 14px));
+		@include offset(7px null null 7px);
+	}
+
+	.bg {
+		@include size(100%);
+		background: #000000;
+		border-radius: 50%;
+		opacity: 0.24;
+	}
+
+	svg {
+		@include absolute(14px null null 14px);
+		@include size(calc(100% - 28px) calc(100% - 28px));
+		display: block;
+		overflow: visible;
+	}
+
+	svg circle {
+		fill: none;
+		stroke: white;
+		stroke-width: 4px;
+		stroke-linecap: butt;
+	}
+
+	svg .circle {
+		stroke: white;
+		stroke-width: 17px;
+		stroke-dashoffset: 0;
+		stroke-dasharray: 566 566;
+		animation: LoadingRotate 2.5s linear infinite;
+	}
+
+	@keyframes LoadingRotate {
+		0% {
+			transform: rotate(0deg);
+			stroke-dasharray: 10 566;
+		}
+		50% {
+			transform: rotate(360deg);
+			stroke-dasharray: 566 566;
+			stroke-dashoffset: 0;
+		}
+		100% {
+			transform: rotate(1080deg);
+			stroke-dasharray: 10 566;
+		}
+	}
+}

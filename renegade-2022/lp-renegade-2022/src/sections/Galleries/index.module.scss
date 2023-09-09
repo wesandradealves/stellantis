@@ -1,0 +1,14 @@
+@import '@styles/theme', '@styles/mixins';
+
+.swiperSlide {
+  background-color: $background-light;
+}
+
+.container {
+  background-color: $background-light;
+  @include desktop {
+    //min-height: 700px;
+    padding-top: toRem(50) !important;
+    padding-bottom: toRem(50) !important;
+  }
+}

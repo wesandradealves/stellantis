@@ -1,0 +1,45 @@
+@import '@styles/theme';
+
+.button {
+  flex-shrink: 0;
+  background-color: $primary;
+  position: relative;
+  transition: background-color $transition-time-quickest
+    $transition-easing;
+  color: $text-primary;
+  width: 36px;
+  height: 36px;
+
+  &.secondary {
+    background-color: $text-secondary;
+  }
+  &.light {
+    background-color: $tabs-color;
+  }
+  &.large {
+    width: 52px;
+    height: 52px;
+  }
+
+  &:hover,
+  &:active {
+    &:not(.disabled) {
+      background: $top-down-gradient;
+      &.secondary {
+        color: $text-secondary;
+      }
+      &.light {
+        background: $primary;
+      }
+    }
+  }
+
+  &.previous svg {
+    transform: rotate(180deg);
+  }
+
+  &.disabled {
+    opacity: 0.3 !important;
+    cursor: default;
+  }
+}

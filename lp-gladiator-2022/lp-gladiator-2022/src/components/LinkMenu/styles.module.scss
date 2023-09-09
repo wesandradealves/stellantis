@@ -1,0 +1,33 @@
+@use "../../styles/variables" as var;
+@use "../../styles/mixins" as mixin;
+
+button.link {
+  width: 100%;
+  cursor: pointer;
+  font-family: var.$medium;
+  font-size: 16px;
+  color: var.$cream;
+  padding: 6px 0;
+  text-align: left;
+  text-transform: uppercase;
+  background-color: transparent;
+
+  &:hover,
+  &.active {
+    color: var.$orangeBF4;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  button.link {
+    font-size: 16px;
+    padding: 5px 0;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  button.link {
+    font-size: 16px;
+    padding: 5px 5px 5px 0;
+  }
+}

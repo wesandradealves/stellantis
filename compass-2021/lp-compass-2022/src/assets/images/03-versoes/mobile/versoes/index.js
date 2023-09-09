@@ -1,0 +1,10 @@
+export * as Diesel80Anos from './80-anos-diesel';
+export * as Flex80Anos from './80-anos-flex';
+export * as LimitedDiesel from './limited-diesel';
+export * as LimitedFlex from './limited-flex';
+export * as LongitudeDiesel from './longitude-diesel';
+export * as LongitudeFlex from './longitude-flex';
+export * as SerieS from './serie-s';
+export * as Sport from './sport';
+export * as Trailhawk from './trailhawk';
+export * as Hibrido from './hibrido-4xe';

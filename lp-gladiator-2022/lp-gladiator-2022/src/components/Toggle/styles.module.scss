@@ -1,0 +1,38 @@
+.toggle {
+  display: inline-flex;
+  position: relative;
+  margin-left: 10px;
+
+  input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 50px;
+    height: 32px;
+    background: #f7dac0;
+    display: block;
+    border-radius:16px;
+    position: relative;
+  }
+  
+  label:after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 20px;
+    height: 20px;
+    background: #a13f22;
+    border-radius: 20px;
+  }
+  
+  input:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+  }
+}

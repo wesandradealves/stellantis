@@ -1,0 +1,69 @@
+@import '@styles/theme', '@styles/mixins';
+
+@mixin buttonHover {
+  &:not(.secondary):not(.light) {
+    // border-width: 1px !important;
+    // border-style: solid !important;
+    color: $text-primary;
+    background: rgb(63, 176, 111);
+    background: linear-gradient(
+      16deg,
+      rgba(63, 176, 111, 1) 0%,
+      rgba(170, 193, 86, 1) 100%
+    );
+  }
+  &:not(.disabled) {
+    color: $primary;
+    background-color: $background-secondary;
+
+    &.secondary {
+      color: $text-secondary;
+    }
+    &.light {
+      color: $text-secondary;
+      border-color: $secondary !important;
+    }
+  }
+}
+
+.button {
+  flex-shrink: 0;
+  background-color: $primary;
+  border-radius: $btn-radius-layout;
+  &.secondary {
+    background-color: $text-secondary;
+  }
+  &.light {
+    color: $text-secondary;
+    background-color: $secondary;
+  }
+  color: $text-primary;
+  width: 36px;
+  height: 36px;
+  &.large {
+    width: 52px;
+    height: 52px;
+  }
+  position: relative;
+  transition: background-color $transition-time-quickest
+    $transition-easing;
+
+  &:active {
+    @include buttonHover;
+  }
+
+  @include desktop {
+    &:hover {
+      @include buttonHover;
+    }
+  }
+
+  &.previous svg {
+    transform: rotate(180deg);
+  }
+
+  &.disabled {
+    opacity: 0.3 !important;
+    cursor: default;
+  }
+}

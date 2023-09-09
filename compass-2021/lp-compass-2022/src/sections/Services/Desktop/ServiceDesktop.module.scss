@@ -1,0 +1,194 @@
+@import '../../../../src/styles/theme.scss',
+  '../../../../src/styles/mixins.scss';
+
+$text-align-left: 4rem;
+
+@function get-vw($target) {
+  $vw-context: (1000 * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+.container {
+  background-color: $darkPrimary;
+  padding-top: 29px;
+  position: relative;
+  .swiperButtonPrev {
+    top: 85% !important;
+    left: 85px;
+    @media (min-width: 1358px) {
+      left: 95px;
+    }
+    @media (min-width: 1679px) {
+      left: 150px;
+    }
+  }
+  .swiperButtonNext {
+    top: 85% !important;
+    left: 145px;
+
+    @media (min-width: 1358px) {
+      left: 150px;
+    }
+    @media (min-width: 1679px) {
+      left: 220px;
+    }
+  }
+
+  .servicetitle{
+  
+    font-weight: 500;
+    font-size: 2rem;
+    font-family: 'Din Regular', sans-serif;;
+    
+    strong{
+      font-weight: 800;
+    }
+  }
+
+  .swiperButtonPrev,
+  .swiperButtonNext {
+    background-color: $primary;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    color: $light;
+    content: '';
+    height: 44px;
+    width: 44px;
+    top: 420px;
+    @media (max-width: 1336px) {
+      top: 420px;
+    }
+    @media (min-width: 1679px) {
+      top: 340px;
+    }
+
+    @media (min-width: 1919px) {
+      top: 480px;
+    }
+
+    &::after {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+}
+// Fora do MAP
+.content {
+  position: relative;
+  @media (min-width: 1679px) {
+  }
+}
+
+// Dentro do MAP
+.resource {
+  display: flex;
+  flex-direction: row;
+  padding: 0 $text-align-left;
+  margin: 0rem 0 3rem;
+  justify-content: center;
+  // gap: 14rem;
+
+  @media (max-width: 1050px) {
+    // gap: 5rem;
+  }
+
+  div {
+    color: $white;
+    max-width: 450px;
+    margin-right: 0rem;
+    padding-left: 2%;
+    @media (min-width: 1358px) {
+      padding-left: 0%;
+    }
+    @media (min-width: 1439px) {
+      margin-left: 4px;
+      margin-right: 8%;
+    }
+    @media (min-width: 1679px) {
+      margin-left: 14px;
+      margin-right: 11%;
+    }
+
+    @media (min-width: 1919px) {
+      margin-left: 79px;
+      margin-right: 10%;
+      max-width: 900px;
+    }
+
+    h1 {
+      color: $primary;
+      font-family: 'DIN Next LT Pro Bold';
+      font-size: 2rem;
+      font-weight: 600;
+      left: $text-align-left;
+      max-width: 380px;
+
+      &:after {
+        content: "";
+        display: flex;
+        height: 5px;
+        width: 15%;
+        margin-top: 1.3rem;
+        background-color: $terciary;
+      }
+
+      @media (max-width: 1050px) {
+        max-width: 300px;
+      }
+
+      @media (min-width: 1919px) {
+        font-size: 2.5rem;
+        max-width: 600px;
+      }
+    }
+
+    h2 {
+      font-family: 'DIN Next LT Pro Bold';
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding-top: 2rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+
+      @media (min-width: 1919px) {
+        font-size: 2rem;
+        padding-top: 1rem;
+      }
+    }
+    .slideDescription {
+      font-family: 'DIN Next LT Pro';
+      font-size: 1rem;
+      font-weight: 400;
+      max-width: 86%;
+      @media (min-width: 1919px) {
+        font-size: 1.5rem;
+        max-width: 95%;
+      }
+    }
+  }
+
+  img {
+    max-width: 34rem;
+
+    @media (min-width: 1679px) {
+      max-width: 38.5rem;
+    }
+
+    @media (min-width: 1919px) {
+      max-width: 46rem;
+    }
+
+    // Diminui o tamanho da img para não sobrepor o texto
+    @media (max-width: 1270px) {
+      max-width: 50%;
+    }
+    @media (min-width: 1439px) {
+      //margin-right: -40%;
+    }
+  }
+  // Encaixa o texto na tela para não sobrepor o texto dobre a imagem
+  @media (max-width: 1050px) {
+    padding: 6rem 2rem;
+  }
+}

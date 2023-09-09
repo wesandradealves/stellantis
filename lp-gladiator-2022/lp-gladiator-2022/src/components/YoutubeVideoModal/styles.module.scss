@@ -1,0 +1,84 @@
+@use "../../styles/variables" as var;
+@use "../../styles/mixins" as mixin;
+
+$ww: 1920;
+
+.close {
+  width: mixin.calcSizeVw(20, $ww);
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  z-index: 1;
+  right: mixin.calcSizeVw(15, $ww);
+  top: mixin.calcSizeVw(15, $ww);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hyperlink {
+  display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    
+  a {
+    font-family: var.$regular;
+    font-size: 14px;
+    margin-left: 0.5rem;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.playButton {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 20px
+}
+
+.playButton::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 0;
+  height: 10px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 6px solid;
+  top: 4px;
+  left: 7px
+}
+
+@media only screen and (max-width: 325px) {
+  
+}
+
+@media only screen and (max-width: 1024px) {
+  .close {
+    width: 5%;
+  }  
+}

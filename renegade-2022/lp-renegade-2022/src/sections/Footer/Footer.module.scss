@@ -1,0 +1,122 @@
+@import '@styles/theme', '@styles/mixins';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: toRem(28);
+  background-color: $background-dark;
+
+  @include desktop {
+    //padding-top: toRem(48);
+    //padding-bottom: toRem(30);
+  }
+}
+
+.footerIbamaMobile {
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 27%;
+  @include desktop {
+    width: 11%;
+  }
+}
+
+.conditional,
+.buttonsHolder {
+  width: 100%;
+}
+
+.buttonsHolder {
+  display: flex;
+  flex-direction: column;
+  padding: 0 toRem(26);
+
+  .menuButton {
+    margin-bottom: toRem(8);
+    width: 100%;
+    line-height: toRem(34);
+
+    &:after {
+      z-index: 0 !important;
+    }
+    p {
+      font-size: toRem(18);
+    }
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: toRem(70);
+  padding-bottom: toRem(20);
+  @include desktop {
+    padding-top: toRem(45);
+  }
+  a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-indent: -2000px;
+    width: toRem(56);
+    height: toRem(56);
+    color: $primary;
+    text-align: center;
+
+    @include desktop {
+      color: $text-primary;
+      padding-top: toRem(45);
+    }
+    &:not(:last-child) {
+      margin-right: toRem(36);
+    }
+
+    &:hover,
+    &:active {
+      color: $text-primary;
+
+      @include desktop {
+        color: $primary;
+      }
+    }
+
+    &:before {
+      font-family: $fontawesome-brands;
+      font-size: toRem(28);
+      content: attr(data-before);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: toRem(-9);
+      margin-top: toRem(-12);
+      display: block;
+      text-indent: 0;
+    }
+  }
+}
+
+.footerIbamaDesktop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 150px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  p {
+    width: 60%;
+    text-align: center;
+  }
+}
+
+.mobileBrandContainer {
+  margin-bottom: toRem(50);
+  img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,112 @@
+@use "../../styles/variables" as var;
+@use "../../styles/mixins" as mixin;
+
+$ww: 1920;
+
+.button {
+  width: 68px;
+  height: 68px;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  border: 1px solid rgba(234, 224, 215, 0.5);
+
+  &.btnPagination {
+    border: 1px solid rgba(234, 224, 215, 1)
+  }
+
+  &:hover {
+    border: 1px solid rgba(234, 224, 215, 0.8);
+  }
+
+  .ico {
+    width: 17px;
+    height: 27px;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: transparent;
+      // border: 1px solid rgba(#534b48, 0.3);
+    }
+  }
+
+  &.buttonPrev {
+    left: 70px;
+
+    &::after{
+      content: "";
+      left: -5px;
+    }
+  }
+
+  &.buttonNext {
+    right: 32px;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .button {
+    width: 48px;
+    height: 48px;
+
+    .ico {
+      width: 12px;
+      height: 23px;
+    }
+  
+    &.buttonPrev {
+      left: 70px;
+  
+      &::after{
+        content: "";
+        left: -5px;
+      }
+    }
+  
+    &.buttonNext {
+      right: 32px;
+    }
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .button {
+    width: 46px!important;
+    height: 46px !important;
+  
+    &::after {
+      content: "";
+      left: 3px;
+      top: 3px;
+    }
+  
+    // .ico {
+    //   width: 17px;
+    //   height: 17px;
+    // }
+  
+    &.buttonPrev {
+      left: 40px;
+    }
+  
+    &.buttonNext {
+      right: 0;
+    }
+  }
+}

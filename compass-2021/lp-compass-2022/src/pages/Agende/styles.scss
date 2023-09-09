@@ -1,0 +1,305 @@
+@import '../../../src/styles/theme',
+  '../../../src/styles/mixins.scss';
+
+.row.concessionarias {
+  margin: 40px 0;
+  color: #fff;
+}
+
+.Concessionaria {
+  margin: 20px 0 !important;
+}
+
+.btn-close {
+  cursor: pointer;
+  position: absolute;
+  top: 4%;
+  right: 3%;
+  height: 10px;
+
+  @media (max-width: 768px) {
+    position: relative;
+    left: 80%;
+    right: auto;
+
+    img {
+      width: 25px;
+    }
+  }
+}
+
+.row {
+  flex-direction: row;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 0 1 auto;
+}
+
+.form-one {
+  flex-basis: 83.33333%;
+  // max-width: 83.33333%;
+  // margin-right: 8.33333%;
+  // margin-left: 8.33333%;
+  // flex: 0 0 auto;
+  flex-direction: column;
+  display: block;
+  min-height: 1px;
+  line-height: 1;
+  box-sizing: border-box;
+  padding: 8em 0 2em;
+
+  @media (max-width: 768px) {
+    padding: 4em 0;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    @media (min-width: 1000px) {
+      font-size: 2rem;
+    }
+  }
+
+  .subtitle {
+    color: #fff;
+    margin-top: 1.8em;
+    margin-bottom: 3em;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    @media (min-width: 1000px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.form-row {
+  display: flex;
+
+  & > div {
+    flex: 1;
+
+    & + div {
+      margin-left: 8.33333%;
+
+      @media (max-width: 768px) {
+        margin-left: 0;
+        margin-top: 8%;
+      }
+    }
+
+    label {
+      font-weight: 700;
+      color: #fff;
+      font-size: 13px;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 10px 5px;
+      font-family: 'ProximaNova-SBold', sans-serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      font-weight: 700;
+      background-color: transparent;
+      color: #edede3;
+      //border: 0;
+      border: 1px solid #e5b056;
+      padding: 18px 5px;
+      margin-top: 10px;
+    }
+
+    .ErrorMessage {
+      font-size: 22px;
+      font-family: 'ProximaNova-Bold', sans-serif;
+      color: #f4bc41;
+      margin-top: 6px;
+      font-weight: 700;
+    }
+
+    .separator {
+      margin-bottom: 30px;
+    }
+
+    textarea {
+      resize: none;
+      color: #e5b056;
+      border: 2px solid #e5b056;
+      width: 100%;
+      height: 10em;
+      padding: 5px;
+      box-sizing: border-box;
+      background-color: transparent;
+      margin-top: 1em;
+      font-family: 'Open Sans', 'futura-pt', sans-serif;
+      font-style: italic;
+      overflow: auto;
+      font-size: 13px;
+      font-weight: 700;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.form-two {
+  padding-top: 1em;
+  .containerTltbox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .lgpdWrapperTlt {
+      width: 83.33333%;
+      margin: 0 auto;
+      display: block;
+      .title {
+        display: block;
+      }
+      .cities {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+  .title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .cities {
+    display: flex;
+    margin-top: 2em;
+    justify-content: center;
+
+    .text {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .autocomplete {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 15px;
+      position: relative;
+
+      input {
+        background-color: transparent;
+        border: 0;
+        border: 1px solid #e5b056;
+        height: 30px;
+        line-height: 30px;
+        padding: 35px 70px;
+        margin-top: 15px;
+        font-size: 1.5rem;
+        color: #fff;
+        text-align: left;
+        cursor: pointer;
+        overflow: auto;
+        width: 100%;
+
+        @media (min-width: 1000px) {
+          padding: 35px 250px;
+          font-size: 1.5rem;
+        }
+      }
+
+      ::placeholder {
+        width: 100%;
+        padding: 0 0 0 0;
+        text-align: left;
+        position: absolute;
+        left: 25px;
+        bottom: 20px;
+        font-size: 1.5rem;
+        color:#e5b056;
+      }
+      &:after {
+        display: none;
+      }
+
+      &::after {
+        content: ' ';
+        position: absolute;
+        top: 14px;
+        right: 2px;
+        width: 12px;
+        height: 12px;
+        margin-top: -6px;
+        background-image: url('./assets/select-arrow.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      .visible {
+        position: absolute;
+        top: 90px;
+        width: 97.5%;
+        height: 15vw;
+        padding: 0;
+        list-style: none;
+        overflow: auto;
+        background-color: #fff;
+        box-shadow: 0 2px 12px #0000001a;
+        z-index: 99;
+        li {
+          padding: 10px;
+          text-align: left;
+          cursor: pointer;
+          line-height: 20px;
+          overflow: auto;
+          color: #e5b056;
+        }
+
+        @media (max-width: 768px) {
+          width: auto;
+          height: 200px;
+        }
+      }
+    }
+  }
+
+  .btn-send {
+    display: table;
+    vertical-align: top;
+    cursor: pointer;
+    padding: 1em 2em;
+    background-color: $primary;
+    color: $black;
+    text-align: center;
+    transition: color 0.3s, background-color 0.3s;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0 auto;
+    margin-bottom: 5em;
+    transition: ease-out 0.5s;
+
+    &:hover {
+      background-color: $white;
+      color: $primary;
+    }
+  }
+}
+
+.agende {
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: $black;
+  font-family: 'Din Next LT Pro', sans-serif !important;
+}

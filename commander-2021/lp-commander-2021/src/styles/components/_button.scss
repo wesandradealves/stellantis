@@ -1,0 +1,50 @@
+.base-button {
+  background-color: $main;
+  color: $contrast;
+  display: flex;
+  max-width: 165px;
+  @include rem('font-size', 12px);
+  font-weight: bold;
+  padding: 8px 12px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.1s linear;
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  &.short {
+    display: inline-flex;
+    max-width: inherit;
+    & > div {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  svg {
+    stroke: $contrast;
+    user-select: none;
+  }
+  &.disabled {
+    opacity: 0.4;
+  }
+  &.invert,
+  &:hover:not(.disabled) {
+    color: $main;
+    background-color: $contrast;
+    svg {
+      stroke: $main;
+      fill: $main;
+    }
+  }
+  &.invert:hover:not(.disabled) {
+    color: $contrast;
+    background-color: $main;
+    svg {
+      stroke: $contrast;
+      fill: $contrast;
+    }
+  }
+}

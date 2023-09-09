@@ -1,0 +1,25 @@
+A princípio esta seção é composta de 10 abas, cada uma com 7 slides, como de acordo com o XD.
+
+Portanto, cada aba, deve dispor de 7 imagens para uso na galeria com seus respectivos tamanhos 1x, 2x e 3x, sempre mantendo proporção entre altura e largura.
+
+Ex.:
+
+Aba sofisticação:
+- Imagem1:
+  aba1/car1.jpg
+  aba1/car1@2x.jpg
+  aba1/car1@3x.jpg
+  ...
+- ...
+- Imagem7:
+  aba1/car7.jpg
+  aba1/car7@2x.jpg
+  aba1/car7@3x.jpg
+
+Aba serviços:
+- Imagem1:
+  aba10/car1.jpg
+  aba10/car1@2x.jpg
+  aba10/car1@3x.jpg
+... etc
+  

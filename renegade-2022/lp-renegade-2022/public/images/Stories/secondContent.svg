@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="231" height="112" viewBox="0 0 231 112">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#dc651e"/>
+      <stop offset="1" stop-color="#c87301"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect width="231" height="112" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_4057" data-name="Grupo 4057" transform="translate(-569.121 -312.382)">
+    <path id="Caminho_2229" data-name="Caminho 2229" d="M-.067-12.48l5.784-4.735a.416.416,0,0,1,.572.046A3.613,3.613,0,0,0,9.18-15.724c2.058,0,3.068-1.228,3.068-3.506V-37.462a.414.414,0,0,1,.439-.439h8.328a.414.414,0,0,1,.437.439v17.223c0,8.548-4.162,12.667-12.009,12.667-4.119,0-7.888-1.708-9.554-4.3a.469.469,0,0,1,.045-.613" transform="translate(650.067 420.954)" fill="url(#linear-gradient)"/>
+    <g id="Grupo_3876" data-name="Grupo 3876" transform="translate(675.346 383.054)">
+      <path id="Caminho_636" data-name="Caminho 636" d="M0-.214A.413.413,0,0,1,.439-.651H36.72a.414.414,0,0,1,.439.437v6.75a.414.414,0,0,1-.439.437H9.379a.233.233,0,0,0-.263.264V10.13a.233.233,0,0,0,.263.262h25.15a.415.415,0,0,1,.439.439V17.4a.413.413,0,0,1-.439.439H9.379a.233.233,0,0,0-.263.262v3.156a.233.233,0,0,0,.263.264H36.72a.415.415,0,0,1,.439.439v6.747a.414.414,0,0,1-.439.439H.439A.413.413,0,0,1,0,28.712Z" transform="translate(0 0.651)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Grupo_3877" data-name="Grupo 3877" transform="translate(715.76 383.054)">
+      <path id="Caminho_637" data-name="Caminho 637" d="M0-.214A.412.412,0,0,1,.437-.651H20.379a.413.413,0,0,1,.439.437v6.75a.413.413,0,0,1-.439.437h-11a.233.233,0,0,0-.263.264V10.13a.233.233,0,0,0,.263.262h8.81a.415.415,0,0,1,.439.439V17.4a.414.414,0,0,1-.439.439H9.379a.233.233,0,0,0-.263.262v3.156a.233.233,0,0,0,.263.264h11a.413.413,0,0,1,.439.439v6.747a.413.413,0,0,1-.439.439H.437A.412.412,0,0,1,0,28.712Z" transform="translate(0 0.651)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Grupo_3878" data-name="Grupo 3878" transform="translate(739.835 383.054)">
+      <path id="Caminho_638" data-name="Caminho 638" d="M-.215-14.632a.413.413,0,0,1-.439-.439V-44a.413.413,0,0,1,.439-.437H12.1c8.2,0,11.791,4.337,11.791,10.3,0,5.784-3.727,10.3-11.791,10.3H8.769a.233.233,0,0,0-.264.262v8.5a.413.413,0,0,1-.437.439Zm14.9-19.5c0-1.667-1.054-2.676-3.069-2.676H8.769a.234.234,0,0,0-.264.265v4.82a.232.232,0,0,0,.264.262h2.848c2.015,0,3.069-1.007,3.069-2.671" transform="translate(0.654 44.434)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+  <g id="Repetição_de_grade_1" data-name="Repetição de grade 1" clip-path="url(#clip-path)">
+    <g id="Grupo_4058" data-name="Grupo 4058" transform="translate(-22 132)">
+      <g id="Grupo_3561" data-name="Grupo 3561" transform="translate(-102 -604.567)">
+        <rect id="Retângulo_2096" data-name="Retângulo 2096" width="146" height="34" transform="translate(124 475.567)" fill="url(#linear-gradient)"/>
+      </g>
+      <text id="Um_ícone_Da_" data-name="Um ícone
+Da " transform="translate(26 -80)" fill="#edede3" font-size="48" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="-0.034em"><tspan x="0" y="0">UM ÍCONE</tspan><tspan x="0" y="48">DA </tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,108 @@
+.section3 {
+  background-color: #fff;
+  text-align: center;
+  .box-car {
+    background-color: $main;
+    padding-bottom: 30px;
+    img {
+      width: 100%;
+      padding: 0px 0 30px;
+    }
+  }
+  .bottom-text-desk {
+    display: none;
+  }
+  .text-block {
+    padding: 50px 5%;
+    h3 {
+      @include rem('font-size', 28px);
+      @include rem('line-height', 30px);
+      color: $main;
+    }
+    h4 {
+      @include rem('font-size', 22px);
+      @include rem('line-height', 28px);
+      font-weight: bold;
+      color: $subtitle;
+      margin-bottom: 12px;
+    }
+    p {
+      @include rem('font-size', 18px);
+      @include rem('line-height', 24px);
+      color: $subtitle;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    & > div {
+      width: 50%;
+    }
+    .bottom-text {
+      display: none;
+    }
+    .bottom-text-desk {
+      display: block;
+      &.text-block {
+        padding: 0;
+      }
+    }
+    .car-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('/static/images/section3/texture.jpg');
+      background-size: cover;
+      position: relative;
+      .box-car {
+        margin: 80px 0;
+        margin-left: -40%;
+        left: -10%;
+        width: 85%;
+        border-radius: 10px;
+        img {
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .top-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-right: 20%;
+      br {
+        display: none;
+      }
+      h4 {
+        padding-bottom: 0;
+        padding-top: 12px;
+      }
+    }
+    .text-block {
+      p {
+        @include rem('font-size', 16px);
+        @include rem('line-height', 24px);
+        color: $subtitle;
+      }
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    .text-block {
+      h3 {
+        @include rem('font-size', 40px);
+        @include rem('line-height', 44px);
+      }
+      h4 {
+        @include rem('font-size', 32px);
+        @include rem('line-height', 28px);
+        padding: 0px 0 30px;
+      }
+      p {
+        @include rem('font-size', 24px);
+        @include rem('line-height', 30px);
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import '@styles/theme', '@styles/mixins';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 #{$section-horizontal-padding} #{toRem(52)};
+
+  @include desktop {
+    padding: 0 #{$section-horizontal-padding-desktop} #{toRem(
+        52
+      )};
+  }
+
+  .tab {
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    margin-right: toRem(12);
+    flex-grow: 1;
+    .content {
+      position: relative;
+      z-index: 2;
+      line-height: toRem(32);
+      color: $text-primary;
+      padding: 0 toRem(10);
+      border: 1px solid $tabs-color;
+      border-radius: $btn-radius-layout;
+      transition: all $transition-time-quick $transition-easing;
+    }
+    &:hover,
+    &.active {
+      .content {
+        background-color: $primary;
+        color: $text-primary;
+        border-color: $primary;
+      }
+    }
+  }
+}

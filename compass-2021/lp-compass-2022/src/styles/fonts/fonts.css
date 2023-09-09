@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "DIN Bold";
+  src: url("DinBold.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "DIN Regular";
+  src: url("DinRegular.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "DIN ExtraBold";
+  src: url("DinExtraBold.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "DIN Next LT Pro";
+  src: url("DINNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "DIN Next LT Pro Bold";
+  src: url("DINNextLTPro-Bold.woff") format("woff");
+  font-weight: 600;
+}

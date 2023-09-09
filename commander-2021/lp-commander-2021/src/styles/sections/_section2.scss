@@ -1,0 +1,119 @@
+.section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('/static/images/section2/bg-section2-mobile@2x.jpg');
+  min-height: 110vw;
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @media screen and (min-width: 1024px) {
+    min-height: 600px;
+    justify-content: center;
+    background-image: url('/static/images/section2/bg-section2-desktop@2x.jpg');
+  }
+
+  @media screen and (min-width: 1446px) {
+    background-image: url('/static/images/section2/bg-section2-desktop@2x.jpg');
+  }
+
+  padding: 32px 0 42px;
+  .desk {
+    display: none;
+  }
+  .mobile {
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 24px;
+  }
+  & > div {
+    width: 100%;
+    text-align: center;
+  }
+  .base-button {
+    max-width: 220px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 24px;
+    &.assine {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+
+      &:hover {
+        background-color: $main;
+        color: white;
+        svg {
+          stroke: white;
+        }
+      }
+    }
+  }
+  h2 {
+    @include rem('font-size', 24px);
+    @include rem('line-height', 26px);
+    color: #fff;
+  }
+  .mobile {
+    padding: 0 2.5%;
+    br {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 425px) {
+    h2 {
+      @include rem('font-size', 28px);
+      @include rem('line-height', 30px);
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .mobile {
+      display: none;
+    }
+    .desk {
+      display: block;
+    }
+    flex-direction: row;
+    padding: 62px 0 62px;
+    & > div {
+      width: 40%;
+      text-align: inherit;
+      &:first-child {
+        text-align: right;
+        width: 60%;
+        margin-right: 40px;
+      }
+      img {
+        max-width: 85%;
+      }
+    }
+    .base-button {
+      width: 320px;
+      max-width: 320px;
+      margin: 12px 0 0;
+      &.big {
+        @include rem('font-size', 18px);
+        padding: 9px 22px;
+      }
+      &.assine {
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+
+        &:hover {
+          background-color: $main;
+          color: white;
+          svg {
+            stroke: white;
+          }
+        }
+      }
+    }
+  }
+}

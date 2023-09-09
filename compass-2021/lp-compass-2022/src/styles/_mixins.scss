@@ -1,0 +1,21 @@
+@mixin desktop {
+  @media (min-width: 1060px) {
+    @content;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #e8b358;
+}
+
+@mixin bulletActive($color) {
+    span {
+      background-color: $color;
+    }
+  }
+
+  @mixin maxWidth {
+    @media (min-width: #{$screen-max-size}) {
+      @content;
+    }
+  }

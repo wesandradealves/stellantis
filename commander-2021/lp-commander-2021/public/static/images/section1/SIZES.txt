@@ -1,0 +1,4 @@
+Backgrounds e heroes
+
+Basicamente dispor das imagens nos mais diversos tamanhos.
+Não tem a mesma preocupação das proporções dos slides e thumbs pois são estáticas e não demandam mudanças constantes ex.: troca de slide.

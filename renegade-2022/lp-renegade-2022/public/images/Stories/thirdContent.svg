@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="318" height="112" viewBox="0 0 318 112">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#dc651e"/>
+      <stop offset="1" stop-color="#c87301"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_3561" data-name="Grupo 3561" transform="translate(-124 -475.567)">
+    <rect id="Retângulo_2096" data-name="Retângulo 2096" width="138" height="38" transform="translate(124 475.567)" fill="url(#linear-gradient)"/>
+  </g>
+  <text id="POTÊNCIA_E_ECÔNOMIA" data-name="POTÊNCIA
+E ECÔNOMIA" transform="translate(8 9)" fill="#edede3" font-size="48" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="-0.034em"><tspan x="0" y="52">POTÊNCIA</tspan></text>
+</svg>

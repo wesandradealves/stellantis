@@ -1,0 +1,136 @@
+ /* for desktop */
+ .whatsapp_float {
+  position: fixed;
+  width: 64px;
+  height: 64px;
+  padding: 8px 12px 9px 12px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #26d366;
+  color: #FFF;
+  border-radius: 129px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 100;
+  overflow: hidden;
+  border: 2px solid transparent;
+
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+
+  img {
+    height: 38px;
+  }
+  span{
+    margin-left: 0px;
+    font-size: 0rem;
+    //display: none;
+    opacity: 0;
+  }
+  &:hover{
+    animation: mymove ;
+    animation-duration: 0.7s;
+    //animation-iteration-count: 1;
+    //animation-delay: 600ms;
+
+    width: 230px;
+
+    img {
+      // animation: leftmove ;
+      // animation-duration: 1.5s;
+      // margin-left: -125px;
+    }
+    span{
+      font-size: 1rem;
+      margin-left: 10px;
+      //animation-duration: 1s;
+      //animation: fontUp;
+      animation: opacityOn 1.2s;
+      //animation-delay: 1s;
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes mymove {
+  from {width: 60px;}
+  to {width: 230px;}
+}
+
+@keyframes leftmove {
+  from {  margin-left: 3px;}
+  to {margin-left: -125px;}
+}
+
+@keyframes fontUp {
+  from {  
+    font-size: 0rem;
+    margin-left: 0px;
+  }
+  to {
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+
+}
+
+@keyframes opacityOn {
+  0% {
+      opacity: 0;
+  }
+  25% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 0;
+  }
+  75% {
+      opacity: 0.5;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes textOn {
+  from {  
+    display: none;
+  }
+  to {
+    display: inline;
+  }
+
+}
+
+
+/* for mobile */
+@media screen and (max-width: 767px) {
+  .whatsapp-icon {
+      margin-top: 10px;
+      width: 54px;
+      height: 54px;
+  }
+
+  .whatsapp_float {
+    width: 64px;
+    height: 64px;
+    bottom: 70px;
+    right: 20px;
+    font-size: 22px;
+
+    &:hover{
+      animation: unset ;
+      animation-duration: 0.7s;
+      width: 64px;
+
+      span{
+        font-size: 1rem;
+        margin-left: 10px;
+        animation: unset;
+        opacity: 1;
+      }
+    }
+  }
+}

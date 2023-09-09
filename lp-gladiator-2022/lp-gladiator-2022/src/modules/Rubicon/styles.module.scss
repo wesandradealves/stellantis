@@ -1,0 +1,248 @@
+@use "../../styles/variables" as var;
+@use "../../styles/mixins" as mixin;
+
+$ww: 1920;
+
+.container {
+  background: url('/assets/images/bg-rubicon.jpg') top center no-repeat;
+  background-size: cover;
+  padding: 60px 0 50px 0;
+  display: flex;
+  flex-direction: column;
+
+  div.wrapperContainer {
+    max-width: 1380px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 105px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-family: var.$blackFont;
+    font-size: 57px;
+    line-height: 73px;
+    color: #9f3f28;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+
+  div.content {
+    margin-top: 40px;
+    flex-wrap: wrap;
+
+    div.sideLeft {
+      width: 485px;
+      float: left;
+
+    }
+    
+    div.sideRight {
+      width: 740px;
+      float: right;
+    }
+
+    p.disclaimer {
+      margin-top: 20px;
+      font-family: var.$regular;
+      display: inline-block;
+      color: var.$black;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  .listThumb {
+    display: flex;
+    margin-bottom: 145px;
+
+    .item {
+      margin-right: 10px;
+      height: auto;
+      position: relative;
+      flex: 1 1 100%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .thumb {
+        position: relative;
+        border-bottom: 10px solid var.$orangeA13;
+
+        span {
+          width: 100% !important;
+          display: block !important;
+        }
+
+        img {
+          width: 100% !important;
+          display: block !important;
+        }
+      }
+
+      .description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0 15px 15px 15px;
+
+        p {
+          font-family: var.$bold;
+          font-size: 19px;
+          color: var.$white;
+          font-weight: bold;
+          line-height: 19px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  $ww: 1920;
+
+  .container {
+    .title {
+      font-size: mixin.calcSizeVw(57, $ww);
+      line-height: mixin.calcSizeVw(73, $ww);
+      margin-bottom: 50px;
+    }
+
+    div.content {
+      margin-top: 40px;
+      padding: 0 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+
+      div.sideLeft {
+        width: 38%;
+
+        a {
+          min-width: 100%;
+        }
+      }
+      
+      div.sideRight {
+        width: 58%;
+      }
+    }
+
+    .listThumb {
+      margin-bottom: mixin.calcSizeVw(145, $ww);
+  
+      .item {
+        margin-right: mixin.calcSizeVw(10, $ww);
+  
+        .thumb {
+          border-bottom: mixin.calcSizeVw(10, $ww) solid var.$orangeA13;
+        }
+  
+        .description {
+          padding: 0 mixin.calcSizeVw(15, $ww) mixin.calcSizeVw(15, $ww) mixin.calcSizeVw(15, $ww);
+  
+          p {
+            font-size: mixin.calcSizeVw(19, $ww);
+            line-height: mixin.calcSizeVw(19, $ww);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .container {
+    div.content {
+      div.sideLeft{
+        button {
+          // height: 70px;
+          // margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .container {
+    padding: 20px 0;
+
+    .logo {
+      display: none;
+    }
+
+    .title {
+      font-size: 26px;
+      line-height: 47px;
+      margin-bottom: 18px;
+    }
+
+    div.content {
+      margin-top: 0;
+      display: block;
+      padding: 0 20px;
+
+      div.sideLeft {
+        width: 100%;
+
+        a {
+          display: none;
+        }
+
+        div.logo {
+          width: 53px;
+          margin-bottom: 20px;
+        }
+      }
+
+      div.sideRight {
+        width: 100%;
+
+        div.containerButton {
+          margin-top: 40px;
+
+          div {
+            a {
+              margin-bottom: 10px;
+            }
+
+            &:last-child {
+              a {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .listThumb {
+      margin-bottom: 50px;
+  
+      .item {
+        margin-right: 10px;
+  
+        .thumb {
+          border-bottom: 10px solid var.$orangeA13;
+        }
+  
+        .description {
+          padding: 0 10px 10px 10px;
+  
+          p {
+            font-size: 13px;
+            line-height: 13px;
+          }
+        }
+      }
+    }
+  }
+}

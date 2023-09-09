@@ -1,0 +1,241 @@
+@use "../../styles/variables" as var;
+@use "../../styles/mixins" as mixin;
+
+$ww: 1920;
+
+.container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  // background-color: var.$brown362;
+  display: flex;
+  align-items: center;
+  
+  &::before {
+    content: '';
+    width: 50%;
+    height: 100%;
+    background-color: #2b2523;
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+  }
+  
+  &::after {
+    content: '';
+    width: 50%;
+    height: 100%;
+    background-color: #372F2D;
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+  }
+
+  .wrapper {
+    max-width: 1380px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var.$brown2B2;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .wrapperShared {
+    margin: 100px 0 100px 130px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      width: auto;
+      font-family: var.$medium;
+      font-size: 18px;
+      color: var.$white;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      padding-left: 0;
+    }
+  }
+
+  .listShared {
+    display: flex;
+
+    li {
+      list-style: none;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .wrapperText {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #372F2D;
+    padding-left: 130px;
+    margin-left: 130px;
+    padding-top: 40px;
+  }
+
+  p {
+    width: 560px;
+    font-family: var.$light;
+    color: var.$white;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .logo {
+    // width: 130px;
+    flex: 0 0 130px;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  .container {
+    .wrapper {
+      padding: 0 0 0 50px;
+
+      .wrapperText {
+        padding-right: 50px;
+      }
+    }
+
+    .wrapperShared {
+      margin: mixin.calcSizeVw(100, $ww) 0 mixin.calcSizeVw(100, $ww) mixin.calcSizeVw(130, $ww);
+  
+      p {
+        font-size: mixin.calcSizeVw(18, $ww);
+        margin-bottom: mixin.calcSizeVw(30, $ww);
+      }
+    }
+  
+    .listShared {
+      li {
+        margin-right: mixin.calcSizeVw(10, $ww);
+      }
+    }
+  
+    .wrapperText {
+      padding-left: mixin.calcSizeVw(130, $ww);
+      margin-left: mixin.calcSizeVw(130, $ww);
+      padding-top: mixin.calcSizeVw(40, $ww);
+    }
+  
+    p {
+      width: mixin.calcSizeVw(560, $ww);
+      font-size: mixin.calcSizeVw(20, $ww);
+      line-height: mixin.calcSizeVw(25, $ww);
+    }
+  
+    .logo {
+      flex: 0 0 mixin.calcSizeVw(130, $ww);
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  $ww: 1366;
+
+  .container {
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  $ww: 1240;
+
+  .container {
+    .wrapperShared {
+      margin: mixin.calcSizeVw(50, $ww) 0 mixin.calcSizeVw(50, $ww) mixin.calcSizeVw(50, $ww);
+  
+      p {
+        font-size: mixin.calcSizeVw(16, $ww);
+        margin-bottom: mixin.calcSizeVw(30, $ww);
+      }
+    }
+  
+    .listShared {
+      li {
+        margin-right: mixin.calcSizeVw(20, $ww);
+      }
+    }
+  
+    .wrapperText {
+      padding-left: mixin.calcSizeVw(50, $ww);
+      margin-left: mixin.calcSizeVw(50, $ww);
+      padding-top: 0;
+    }
+  
+    p {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  
+    .logo {
+      flex: 0 0 mixin.calcSizeVw(130, $ww);
+    }
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .container {
+    height: auto;
+    padding: 50px 0 0 0;
+    background-color: #2b2523;
+    padding-bottom: 68px;
+
+    &:before,
+    &::after {
+      display: none;
+    }
+
+    .wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 20px;
+    }
+
+    .logo {
+      margin-bottom: 30px;
+    }
+
+    .wrapperShared {
+      margin-left: 0;
+      margin-bottom: 50px;
+
+      p {
+        font-size: 13px;
+        line-height: 24px;
+      }
+    }
+
+    .wrapperText {
+      width: 100vw;
+      padding-right: 0;
+      margin-left: -20px;
+      padding: 50px 20px;
+
+      p {
+        width: 100%;
+        font-size: 13px;
+        line-height: 18px;
+        display: block !important;
+      }
+    }
+  }
+}

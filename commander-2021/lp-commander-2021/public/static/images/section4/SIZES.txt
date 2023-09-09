@@ -1,0 +1,3 @@
+Atenção para top-bg.jpg que é utilizada para dispositivos mobile.
+
+Os car-big e car-mini devem ter suas respectivas versões 1x, 2x e 3x, sempre mantendo a proporção de altura e largura.

@@ -1,0 +1,3 @@
+Esta galeria é disposta de N imagens com sempre uma em destaque, esta sendo a de melhor qualidade disponível, e.g., car1@3x.jpg.
+
+Dispor de suas respectivas imagens 1x, 2x, e 3x, sempre mantendo a proporção entre altura e largura.

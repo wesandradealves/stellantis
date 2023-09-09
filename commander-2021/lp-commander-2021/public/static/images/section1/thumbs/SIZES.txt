@@ -1,0 +1,10 @@
+Thumbs (sempre manter a proporção entre cada item):
+
+- Imagens 1x
+111x70 pixels
+
+- Imagens 2x
+222x140 pixels
+
+- Imagens 3x
+333x210 pixels

@@ -1,0 +1,44 @@
+$black: #16191a;
+$blue: #7cafeb;
+$danger: #ff4757;
+$grey: #413c3a;
+$greyLight: #32393d;
+$greyDark: #1e2123;
+$greyMedium: #999891;
+$light: #fffaeb;
+// primary: #E8B358;
+$primary: #269dde;
+$secondary: #176CAF;
+$grey: #f0f0f0;
+$terciary: #26A6EB;
+$darkPrimary: #00151D;
+$success: #2c8d54;
+$purple: #9143ba;
+$warning: #fffaeb;
+$white: #ffffff;
+$darkBlue: #001e2a;
+$default: #000000;
+$yellow: #f2d788;
+$shadown: #213a6b;
+$brown: #34312f;
+$zombie: #e5c797;
+$textBlue: #00abe5;
+$infoText: #003c55;
+
+$bullet-color: #cccdce;
+
+$section-horizontal-padding: clamp(40px, 4vw, 90px);
+$section-horizontal-padding-desktop: clamp(70px, 4vw, 90px);
+
+$transition-time: 400ms;
+$transition-time-quick: 200ms;
+$transition-time-quickest: 50ms;
+$transition-easing: ease-in-out;
+
+$screen-sm-min: 576.1px;
+$screen-md-min: 768.1px;
+$screen-lg-min: 992.1px;
+$screen-desktop-min: 1024.1px;
+$screen-xl-min: 1200.1px;
+$screen-xxl-min: 1920.1px;
+$screen-max-size: 2560px;

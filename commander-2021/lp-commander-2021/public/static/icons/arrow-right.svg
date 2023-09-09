@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 18.708 15.383">
+  <defs>
+    <style>.a{fill:none;stroke;stroke-width:2px;}</style>
+  </defs>
+  <g transform="translate(0 0.681)">
+    <path class="a" d="M0,6.916,7.436,0l6.539,6.916" transform="translate(17.3 0) rotate(90)"/>
+    <path class="a" d="M0,0V17.4" transform="translate(17.397 6.976) rotate(90)"/>
+  </g>
+</svg>

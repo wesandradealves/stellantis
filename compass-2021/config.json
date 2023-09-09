@@ -1,0 +1,22 @@
+﻿{
+  "projects": [
+    {
+      "server": {
+        "type": "nginx",
+        "language": {
+          "type": "node",
+          "version": "14.19.0"
+        }
+      },
+      "external-access": [
+        {
+          "user": "lp-compass-2022",
+          "pass": "VlcAg6lvQvab52V7!"
+        }
+      ],
+      "folder": "lp-compass-2022/",
+      "slug": "lp-compass-hybrid-2022",
+      "render": "server-side"
+    }
+  ]
+}

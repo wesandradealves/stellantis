@@ -1,0 +1,138 @@
+@use "../../styles/variables" as var;
+@use "../../styles/mixins" as mixin;
+
+$ww: 1920;
+
+.button {
+  width: 68px;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  border: none;
+
+  &:hover {
+    background-color: transparent;
+
+    .ico {
+      img {
+        opacity: 0.7;
+      }
+    }
+
+    &:disabled {
+      .ico {
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .ico {
+    width: 39px;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      display: block;
+
+      &.btnEnabled {
+        display: block !important;
+      }
+    
+      &.btnDisabled {
+        display: none !important;
+      }
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    .ico {
+      img {
+        &.btnEnabled {
+          display: none !important;
+        }
+    
+        &.btnDisabled {
+          display: block !important;
+        }
+      }
+    }
+  }
+
+  &.buttonPrev {
+    left: 40px !important;
+
+    &::after{
+      content: "";
+      left: -5px;
+    }
+  }
+
+  &.buttonNext {
+    right: 40px !important;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  $ww: 1920;
+
+  .button {
+    width: mixin.calcSizeVw(68, $ww);
+
+    .ico {
+      width: mixin.calcSizeVw(39, $ww);
+    }
+
+    &.buttonPrev {
+      left: mixin.calcSizeVw(40, $ww) !important;
+
+      &::after{
+        content: "";
+        left: mixin.calcSizeVw(-5, $ww);
+      }
+    }
+
+    &.buttonNext {
+      right: mixin.calcSizeVw(40, $ww) !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .button {
+    width: 46px!important;
+  
+    &::after {
+      content: "";
+      left: 3px;
+      top: 3px;
+    }
+  
+    .ico {
+      width: 17px;
+    }
+  
+    &.buttonPrev {
+      left: 40px;
+  
+      &::after{
+        content: "";
+        left: -5px;
+      }
+    }
+  
+    &.buttonNext {
+      right: 0;
+    }
+  }
+}

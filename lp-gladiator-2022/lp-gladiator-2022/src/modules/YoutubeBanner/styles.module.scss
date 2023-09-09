@@ -1,0 +1,76 @@
+@use "../../styles/variables" as var;
+@use "../../styles/mixins" as mixin;
+
+$ww: 1920;
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var.$white;
+  padding: 1rem 2rem;
+  position: relative;
+
+    .leftItem {
+      width: 100%;
+      height: 200px;
+      position: relative;
+      background:
+        url("../../../public/assets/images/bolovo/desktop/jeep-gladiator-banner-bolovo@3x.png") no-repeat center right;
+      background-size: contain;
+      position: relative;
+      z-index: 2;
+    }
+
+    .rightItem {
+      display: flex; 
+      align-items: center;
+      width: 113%;
+      height: 200px;
+      padding: 1rem auto;
+      margin-left: -37px;
+      background:
+      url("../../../public/assets/images/bolovo/desktop/bg-gladiator-bolovo@3x.jpg") no-repeat center left;
+      background-size: contain;
+      position: relative;
+    }
+  }
+
+  @media only screen and (max-width: 325px) {
+    .container {
+      padding: 1rem;
+
+      .leftItem {
+        display: none;
+      }
+
+      .rightItem {
+        height: 450px;
+        align-items: flex-start;
+        margin: 0 auto;
+        background:
+          url("../../../public/assets/images/bolovo/mobile/jeep-gladiator-banner-bolovo-mobile@3x.jpg") no-repeat center top / cover;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .container {
+      padding: 1rem;
+
+      .leftItem {
+        display: none;
+      }
+
+      .rightItem {
+        height: 400px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 0 auto;
+        background:
+          url("../../../public/assets/images/bolovo/mobile/jeep-gladiator-banner-bolovo-mobile@3x.jpg") no-repeat center top / contain;
+      }
+    }
+  }

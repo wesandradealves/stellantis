@@ -1,0 +1,65 @@
+@import '../../../../src/styles/theme',
+  '../../../../src/styles/mixins.scss';
+
+.container {
+  text-align: 'left';
+  font-size: 1rem;
+  line-height: 1rem;
+  color: $white;
+  margin-top: 30px;
+  font-family: 'Din Next LT Pro', sans-serif;
+
+  .containerBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .lgpdWrapper {
+      width: 83.33333%;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #e5b056;
+  }
+
+  div {
+    display: flex;
+    //align-items: flex-start;
+
+    input {
+      width: auto !important;
+      margin-right: 1rem;
+    }
+  }
+
+  .errorLgod {
+    position: absolute;
+    bottom: -10px;
+  }
+}
+
+.Img {
+  &::selection {
+    background: transparent;
+  }
+
+  &::-moz-selection {
+    background: transparent;
+  }
+
+  &::-webkit-selection {
+    background: transparent;
+  }
+
+  &.is-blurred {
+    filter: blur(1px);
+    transition: filter 600ms ease-out;
+  }
+
+  &.is-blurred.is-loaded {
+    filter: blur(0);
+  }
+}

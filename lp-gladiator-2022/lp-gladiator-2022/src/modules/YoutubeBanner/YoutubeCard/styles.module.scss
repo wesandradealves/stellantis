@@ -1,0 +1,63 @@
+@use "../../../styles/variables" as var;
+@use "../../../styles/mixins" as mixin;
+
+$ww: 1920;
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  max-width: 589px;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background-color: var.$orangeA13;
+  color: var.$white ;
+  position: absolute;
+  
+  h4 {
+    font-family: var.$medium;
+    color: var.$white;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 1rem auto;
+    font-family: var.$light;
+    color: var.$white;
+    font-weight: 500;
+    line-height: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .cardContent {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cardContent {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .cardContent {
+    padding: 2rem auto;
+    background-color: var.$orangeA13;
+    color: var.$white ;
+    position: absolute;
+    
+    h4 {
+      font-size: 18px;
+    }
+  
+    p {
+      font-size: 12px;
+      margin: 0.5rem auto;
+    }
+  }
+}

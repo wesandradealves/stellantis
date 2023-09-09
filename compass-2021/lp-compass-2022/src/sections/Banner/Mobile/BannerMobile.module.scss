@@ -1,0 +1,70 @@
+@import '../../../../src/styles/theme.scss',
+  '../../../../src/styles/mixins.scss';
+
+@function get-vw($target) {
+  $vw-context: (1000 * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+.container {
+  position: relative;
+  padding-top: 50px;
+  // min-height: 46rem;
+  width: 100%;
+  background-color: #01151d;
+}
+
+.content {
+  position: relative;
+  right: 0;
+  // height: 122px;
+  padding-bottom: 2rem;
+  color: $white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px 0 0 0;
+  text-align: center;
+  font-family: 'DIN Next LT Pro';
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $terciary;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-family: 'DIN Next LT Pro';
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+}
+
+.fotoBanner {
+  width: 100%;
+  object-fit: cover;
+}
+.cta {
+  display: flex;
+  justify-content: space-between;
+  width: 65% !important;
+
+  h3 {
+    font-family: 'DIN Next LT Pro';
+    font-weight: 600;
+    font-size: 1.0625rem;
+    letter-spacing: 1px;
+  }
+
+  img {
+    min-height: 4px;
+    width: 8px;
+  }
+}

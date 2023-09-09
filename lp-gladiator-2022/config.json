@@ -1,0 +1,25 @@
+{
+	"projects": [
+		{
+			"folder": "lp-gladiator-2022/",
+			"slug": "lp-gladiator-2022",
+			"external-access": [
+				{
+					"user": "projetos@umstudio.com",
+					"pass": "Gsnj#2kw8"
+				},
+				{
+					"user": "lp-gladiator",
+					"pass": "2&uiSnjsx"
+				}
+			],
+			"render":"static",
+			"server":{
+				"type":"nginx",
+				"language":{
+					"type":"node"
+				}
+			}
+		}
+	]
+}

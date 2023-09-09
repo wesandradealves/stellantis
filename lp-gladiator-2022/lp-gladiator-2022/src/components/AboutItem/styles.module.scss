@@ -1,0 +1,147 @@
+@use "../../styles/variables" as var;
+@use "../../styles/mixins" as mixin;
+
+$ww: 1920;
+
+.container {
+  width: 100%;
+  max-width: 1380px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 15px auto;
+
+  .thumb {
+    flex: 0 0 calc(59.4202% - 20px);
+    position: relative;
+    display: flex;
+    
+    img {
+      height: 100% !important;
+      position: relative !important;
+      z-index: 1;
+    }
+  }
+
+  .content {
+    // flex: 0 0 calc(44.4507% - 4.1666%);
+    margin-left: 4.1666%;
+    color: var.$white;
+
+    p {
+      font-family: var.$regular;
+      font-size: 23px;
+      color: var.$brown322;
+      line-height: 29px;
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-family: var.$bold;
+      color: var.$orangeA13;
+      font-size: 30px;
+      line-height: 32px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      position: relative;
+
+      br {
+        display: none;
+
+        &.desktop {
+          display: block;
+        }
+      }
+    }
+
+    a {
+      max-width: 240px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  $ww: 1920;
+  
+  .container {
+    padding: 40px 50px;
+
+    .content {
+      p {
+        font-size: mixin.calcSizeVw(23, $ww);
+        line-height: mixin.calcSizeVw(29, $ww);
+        margin-bottom: mixin.calcSizeVw(30, $ww);
+      }
+  
+      h4 {
+        font-size: mixin.calcSizeVw(30, $ww);
+        line-height: mixin.calcSizeVw(32, $ww);
+        margin-bottom: mixin.calcSizeVw(15, $ww);
+      }
+  
+      a {
+        max-width: 240px;
+      }
+    }
+    
+    // padding: 0 150px;
+
+    // .thumb {
+    //   flex: 0 0 62.8318%;
+    // }
+
+    // .content {
+    //   flex: 0 0 31.5044%;
+    //   // margin-left: 4.4935%;
+
+    //   h4{
+    //     margin-bottom: 10px;
+    //   }
+
+    //   p {
+    //     font-size: 16px;
+    //     line-height: 20px;
+    //   }
+    // }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .container {
+    padding: 0 50px;
+    justify-content: space-between;
+
+    .thumb {
+      flex: 0 0 calc(63.5416% - 20px);
+    }
+
+    .content {
+      h4{
+        // margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    .thumb {
+      flex: 0 0 calc(64.5058% - 20px);
+    }
+
+    .content {
+      h4 {
+        &::before {
+          content: '';
+          height: 40px;
+          top: 6px;
+        }
+
+      }
+
+      p{
+        line-height: 1;
+      }
+    }
+  }
+}

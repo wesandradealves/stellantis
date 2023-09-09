@@ -1,0 +1,205 @@
+.section4 {
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .faixa-top {
+    position: relative;
+    img {
+      width: 100%;
+      display: block;
+      margin-bottom: -3px;
+    }
+    & > div {
+      position: absolute;
+      text-align: center;
+      color: $contrast;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .chevron-click {
+    display: none;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      justify-content: flex-start;
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      span {
+        font-weight: 400;
+        @include rem('font-size', 26px);
+        @include rem('line-height', 22px);
+        color: $contrast;
+      }
+      svg {
+        position: absolute;
+        top: 100%;
+        margin-top: 8px;
+      }
+
+      // &:hover {
+      //   svg {
+      //     animation: anima-seta 0.4s infinite alternate;
+      //   }
+      // }
+    }
+    @media screen and (min-width: 1025px) {
+      top: 15%;
+      span {
+        @include rem('font-size', 32px);
+        @include rem('line-height', 24px);
+      }
+      svg {
+        margin-top: 16px;
+      }
+    }
+    @media screen and (min-width: 1400px) {
+      span {
+        @include rem('font-size', 32px);
+        @include rem('line-height', 24px);
+      }
+    }
+  }
+
+  .faixa-bottom {
+    img {
+      width: 100%;
+    }
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  .top {
+    .info {
+      position: absolute;
+      color: $contrast;
+      text-align: center;
+      width: 100%;
+      padding: 0 3%;
+      h2 {
+        padding-top: 20px;
+        text-transform: uppercase;
+        @include rem('font-size', 20px);
+      }
+      li {
+        @include rem('font-size', 16px);
+      }
+      @media screen and (min-width: 375px) {
+        h2 {
+          padding-top: 37px;
+          @include rem('font-size', 28px);
+        }
+        li {
+          @include rem('font-size', 18px);
+        }
+      }
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+    position: relative;
+    .bg-top {
+      width: 100%;
+      display: block;
+    }
+    .car {
+      position: absolute;
+      bottom: 0%;
+      transform: translate(-50%, 50%);
+      left: 50%;
+    }
+    @media screen and (min-width: 768px) {
+      .car {
+        bottom: 20%;
+        max-width: 60%;
+      }
+    }
+  }
+  .bottom {
+    padding-top: 100px;
+    background: transparent
+      linear-gradient(180deg, var(--unnamed-color-ebecee) 0%, #a1a0a6 100%) 0%
+      0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #ebecee 0%, #a1a0a6 100%) 0%
+      0% no-repeat padding-box;
+    .info {
+      display: none;
+      @media screen and (min-width: 768px) {
+        display: block;
+        text-align: center;
+        margin-bottom: 35px;
+        h2 {
+          padding-top: 37px;
+          @include rem('font-size', 28px);
+          color: $main;
+          text-transform: uppercase;
+        }
+        li {
+          @include rem('font-size', 18px);
+        }
+      }
+    }
+
+    .section4-swiper {
+      padding-bottom: 20px;
+      .slider-item {
+        cursor: pointer;
+        text-align: center;
+        position: relative;
+        padding-bottom: 5px;
+        &.active:after {
+          content: '';
+          height: 2px;
+          width: 90%;
+          position: absolute;
+          bottom: 0px;
+          background-color: $main;
+          left: 5%;
+        }
+        &:hover:after {
+          content: '';
+          height: 2px;
+          width: 90%;
+          position: absolute;
+          bottom: 0px;
+          background-color: $main;
+          left: 5%;
+          @media screen and (min-width: 1025px) {
+            background-color: rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      padding-bottom: 45px;
+    }
+  }
+  .base-button {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+      margin: 45px auto 0;
+    }
+    @media screen and (min-width: 769px) {
+      width: 404px;
+      max-width: 404px;
+      @include rem('font-size', 22px);
+      padding: 10px 25px;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@import '@styles/theme', '@styles/mixins';
+
+.contentHolder {
+  background-color: $button-background;
+  color: $text-primary;
+  transition: background-color $transition-time-quickest $transition-easing;
+  padding: 13px 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  border-radius: $btn-radius-layout;
+}
+
+.button {
+  position: relative;
+  display: block;
+  text-decoration: none;
+
+  &.larger {
+    .contentHolder {
+      padding: 12px 24px;
+    }
+
+    .content {
+      font-size: toRem(16);
+    }
+  }
+
+  border: 1px solid transparent;
+
+  .content {
+    text-align: left !important;
+    color: $text-primary;
+    font-weight: bold;
+    font-size: toRem(16);
+
+    &.withIcon:before {
+      content: attr(data-icon-code);
+      font-family: $fontawesome-brands;
+      font-size: toRem(14);
+      margin-right: 3px;
+    }
+  }
+
+  svg {
+    color: $text-primary;
+    flex-shrink: 0;
+  }
+
+  &:hover,
+  &:active {
+    .content {
+      color: $text-primary;
+    }
+
+    svg {
+      color: $text-primary;
+    }
+
+    .contentHolder {
+      background: rgb(170, 193, 86);
+      background: linear-gradient(
+                      66deg,
+                      rgba(170, 193, 86, 1) 0%,
+                      rgba(63, 176, 111, 1) 100%
+      );
+    }
+  }
+
+  .bg {
+    transition: all $transition-time-quickest $transition-easing;
+  }
+
+  &.larger .bg {
+    left: 7px;
+    top: 7px;
+  }
+
+  &.secondary {
+    .bg {
+      border-color: $text-secondary;
+    }
+
+    .contentHolder {
+      background-color: $text-secondary;
+      color: $text-primary;
+    }
+
+    &:hover,
+    &:active {
+      .content {
+        color: $text-secondary;
+      }
+
+      border-color: $text-secondary;
+
+      svg {
+        color: $text-secondary;
+      }
+
+      .contentHolder {
+        background-color: $background-secondary;
+      }
+    }
+  }
+}

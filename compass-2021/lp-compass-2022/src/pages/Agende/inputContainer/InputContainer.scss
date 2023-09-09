@@ -1,0 +1,41 @@
+@import '../../../../src/styles/theme',
+  '../../../../src/styles/mixins.scss';
+
+input:focus {
+  transition: ease-in 0.5s;
+  border-bottom: 1px solid #e5b056 !important;
+}
+
+textarea:focus {
+  border: 1px solid #e5b056 !important;
+}
+
+.InputContainer {
+  text-align: left;
+  text-decoration: none;
+
+  input {
+    display: block;
+    width: 100%;
+    padding: 25px 5px;
+    font-family: 'Open Sans', 'futura-pt', sans-serif;
+    font-style: italic;
+    font-size: 2rem;
+    background-color: transparent;
+    color: #4f4f50;
+    border: 0px;
+    border-bottom: 1px solid #4a4a4a;
+  }
+
+  .msg-error {
+    margin-top: 0.2em;
+  }
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}

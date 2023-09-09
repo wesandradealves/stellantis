@@ -1,0 +1,14 @@
+.layout {
+  background-color: #fff;
+  .content-wrapper {
+    width: 100%;
+    @media screen and (min-width: 1025px) {
+      padding-left: 224px;
+    }
+    .content {
+      width: 100%;
+      background-color: #3f3b39;
+      color: #fff;
+    }
+  }
+}

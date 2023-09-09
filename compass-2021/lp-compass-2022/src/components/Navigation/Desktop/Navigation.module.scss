@@ -1,0 +1,17 @@
+@import '../../../styles/theme',
+  '../../../styles/mixins.scss';
+
+.container{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    // color: $light;
+
+
+    img{
+        width: 15%;
+        transform: rotate(0deg) !important;
+        margin-right: 5px;
+
+    }
+}

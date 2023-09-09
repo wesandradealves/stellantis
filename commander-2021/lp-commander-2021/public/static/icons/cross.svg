@@ -1,0 +1,14 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="#434040"
+    viewBox="0 0 16.001 16.001"
+>
+    <g transform="translate(-114 -96)">
+    <rect width="1.882" height="16.001" transform="translate(121.06 96)" />
+    <rect
+        width="1.882"
+        height="16.001"
+        transform="translate(130.001 103.059) rotate(90)"
+    />
+    </g>
+</svg>

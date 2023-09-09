@@ -1,0 +1,174 @@
+@use "../../styles/variables" as var;
+@use "../../styles/mixins" as mixin;
+
+$ww: 1920;
+
+.container {
+  width: 100%;
+  max-width: 1380px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 15px auto;
+
+  .thumb {
+    flex: 0 0 calc(59.0579% - 20px);
+    position: relative;
+    display: flex;
+    
+    img {
+      height: 100% !important;
+      position: relative !important;
+      z-index: 1;
+    }
+  }
+
+  .content {
+    flex: 0 0 40.5797%;
+    color: var.$white;
+
+    p {
+      font-family: var.$light;
+      font-size: 23px;
+      line-height: 29px;
+      color: #FEF4EA;
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-family: var.$blackFont;
+      color: #FEF4EA;
+      font-size: 54px;
+      line-height: 54px;
+      font-weight: bold;
+      margin-bottom: 50px;
+      position: relative;
+
+      span {
+        display: inline-block;
+        font-family: var.$light;
+        font-size: 28px;
+        line-height: 34px;
+        margin-bottom: 5px;
+      }
+    }
+
+    a {
+      max-width: 240px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  $ww: 1920;
+
+  .container {
+    padding: 0 50px;
+
+    .content {
+      padding-right: 30px;
+
+      p {
+        font-size: mixin.calcSizeVw(23, $ww);
+        line-height: mixin.calcSizeVw(29, $ww);
+        margin-bottom: mixin.calcSizeVw(30, $ww);
+      }
+  
+      h4 {
+        font-size: mixin.calcSizeVw(45, $ww);
+        line-height: mixin.calcSizeVw(45, $ww);
+        margin-bottom: mixin.calcSizeVw(50, $ww);
+  
+        span {
+          font-size: mixin.calcSizeVw(26, $ww);
+          line-height: mixin.calcSizeVw(32, $ww);
+          margin-bottom: mixin.calcSizeVw(5, $ww);
+        }
+      }
+  
+      a {
+        max-width: mixin.calcSizeVw(240, $ww);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .container {
+    padding: 0 50px;
+    justify-content: space-between;
+
+    .thumb {
+      flex: 0 0 calc(63.5416% - 20px);
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  $ww: 1100;
+
+  .container {
+    .thumb {
+      flex: 0 0 calc(64.5058% - 20px);
+    }
+
+    .content {
+      p {
+        font-size: mixin.calcSizeVw(16, $ww);
+        line-height: mixin.calcSizeVw(21, $ww);
+        margin-bottom: mixin.calcSizeVw(20, $ww);
+      }
+  
+      h4 {
+        font-size: mixin.calcSizeVw(40, $ww);
+        line-height: mixin.calcSizeVw(40, $ww);
+        margin-bottom: mixin.calcSizeVw(40, $ww);
+  
+        span {
+          font-size: mixin.calcSizeVw(22, $ww);
+          line-height: mixin.calcSizeVw(28, $ww);
+          margin-bottom: mixin.calcSizeVw(3, $ww);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  $ww: 1100;
+  
+  .container {
+    flex-direction: column;
+    padding: 0 20px;
+
+    .thumb {
+      flex: 0 0 100%;
+      order: 1;
+    }
+
+    .content {
+      flex: 0 0 100%;
+      padding-right: 0;
+      order: 2;
+      margin-top: 90px;
+
+      p {
+        font-size: 15px;
+        line-height: 20px;
+        font-family: var.$light;
+      }
+  
+      h4 {
+        font-size: 31px;
+        line-height: 31px;
+        margin-bottom: 10px;
+  
+        span {
+          font-size: 15px;
+          line-height: 18px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

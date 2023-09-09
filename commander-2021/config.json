@@ -1,0 +1,22 @@
+﻿{
+  "projects": [
+    {
+      "server": {
+        "type": "nginx",
+        "language": {
+          "type": "node"
+        }
+      },
+      "external-access": [
+        {
+          "user": "lp-commander-2021",
+          "pass": "V625siUQva!AQv"
+        }
+      ],
+      "folder": "lp-commander-2021/",
+      "slug": "lp-commander-2021",
+      "output": "out",
+      "render": "static"
+    }
+  ]
+}

@@ -1,0 +1,775 @@
+.section1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: top;
+  background-image: url('/static/images/section1/bg-mobile@2x.jpg');
+  height: 100%;
+  position: relative;
+  width: 100%;
+  color: $contrast;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  .section1-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .responsive-image.hidden {
+    line-height: 1;
+    padding: 0;
+    visibility: hidden;
+    width: 100%;
+  }
+
+  .swipe-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    p {
+      margin: 0px;
+      padding: 0;
+      margin-right: 8px;
+    }
+    @media (min-width: 375px) {
+      margin-bottom: 15px;
+    }
+    @media (min-width: 500px) {
+      margin-bottom: 20px;
+    }
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .car {
+    max-width: 100%;
+    @media (min-width: 768px) {
+      max-width: 40%;
+    }
+    @media (min-width: 1400px) {
+      max-width: 45%;
+    }
+  }
+
+  .encante-se {
+    display: inline-block;
+    text-align: center;
+    z-index: 25;
+    width: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 15px;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 5%;
+    span {
+      font-weight: 700;
+      @include rem('font-size', 18px);
+      @media (min-width: 1900px) {
+        @include rem('font-size', 26px);
+      }
+    }
+    svg {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      margin-top: 6px;
+      transform: translateX(-50%);
+    }
+    &:hover {
+      svg {
+        animation: anima-seta 0.4s infinite alternate;
+      }
+    }
+  }
+
+  h1 {
+    font-weight: 700;
+    @include rem('font-size', 28px);
+    letter-spacing: 3px;
+  }
+
+  h2 {
+    font-weight: 400;
+    @include rem('font-size', 18px);
+    padding: 0px 2rem;
+  }
+
+  a {
+    text-align: center;
+    text-decoration: none;
+    color: $contrast;
+  }
+
+  @media (min-width: 768px) {
+    background-image: url('/static/images/section1/hero-bg-desktop@2x.jpg');
+  }
+  @media (min-width: 769px) {
+    h1 {
+      @include rem('font-size', 36px);
+    }
+
+    h2 {
+      @include rem('font-size', 18px);
+    }
+
+    @include rem('font-size', 36px);
+  }
+
+  @media (min-width: 1500px) {
+    h1 {
+      @include rem('font-size', 53px);
+    }
+
+    h2 {
+      @include rem('font-size', 25px);
+    }
+
+    @include rem('font-size', 36px);
+  }
+
+  // @media (min-width: 1500px) {
+  //   background-image: url('/static/images/section1/hero-bg2@2x.jpg');
+  // }
+
+  .jeep-swiper {
+    text-align: left;
+    padding: 0 2rem 15px;
+
+    @media (min-width: 769px) {
+      padding: 0 0 0px;
+    }
+  }
+
+  .modal-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-card {
+    position: relative;
+    background-color: $contrast;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 769px) {
+      padding: 64px 35px;
+      flex-direction: row;
+      width: 1025px;
+      height: 500px;
+      justify-content: flex-end;
+    }
+
+    @media (min-width: 1400px) {
+      height: 600px;
+    }
+  }
+
+  .modal-card-image {
+    width: 100%;
+    height: auto;
+    padding-right: 0;
+
+    @media (min-width: 769px) {
+      width: 590px;
+      min-width: 590px;
+      max-width: 590px;
+      height: auto;
+      padding-right: 16px;
+    }
+  }
+
+  .modal-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    padding: 2rem;
+    color: $text;
+
+    h1 {
+      color: $subtitle;
+      @include rem('font-size', 18px);
+      margin-bottom: 16px;
+      letter-spacing: 0px;
+    }
+
+    ul {
+      padding: 1rem;
+      margin: 0;
+    }
+
+    li,
+    p {
+      @include rem('font-size', 16px);
+    }
+
+    @media (min-width: 769px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      padding: 0 2rem;
+
+      h1 {
+        @include rem('font-size', 22px);
+        margin-bottom: 22px;
+      }
+
+      ul {
+        padding: 1rem;
+        margin: 0;
+      }
+
+      li,
+      p {
+        @include rem('font-size', 16px);
+      }
+    }
+  }
+
+  .modal-card-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    @include rem('font-size', 16px);
+    padding: 0.5rem;
+
+    div:first-of-type {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    div[role='button'] {
+      width: 48px;
+      height: 48px;
+      margin-right: 8px;
+      svg {
+        user-select: none;
+      }
+    }
+
+    span {
+      font-weight: 700;
+    }
+
+    width: 100%;
+
+    @media (min-width: 769px) {
+      padding: 0;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      flex-direction: row;
+      @include rem('font-size', 18px);
+
+      ul {
+        padding: 1rem;
+        margin: 0;
+      }
+
+      div[role='button'] {
+        min-width: 48px;
+      }
+    }
+  }
+
+  .slider-item {
+    width: 100%;
+    height: auto;
+    border: 1px solid $main;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .slider-thumb {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80px;
+    @media (min-width: 1025px) {
+      height: 99px;
+    }
+    @media (min-width: 1500px) {
+      height: 138px;
+    }
+  }
+
+  .slider-footer {
+    position: relative;
+    height: 41px;
+    background-color: $main;
+    padding: 0.25rem 0.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    @include rem('font-size', 12px);
+
+    span {
+      color: $contrast;
+      display: block;
+      width: 70%;
+    }
+
+    @media (min-width: 1025px) {
+      @include rem('font-size', 13px);
+    }
+    @media (min-width: 1500px) {
+      @include rem('font-size', 16px);
+      height: 61px;
+    }
+  }
+
+  .slider-square-plus-button {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: $bg;
+    border-radius: 4px;
+    right: 6px;
+    top: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      fill: $text;
+      width: 16px;
+    }
+
+    &:hover {
+      background: $text;
+
+      svg {
+        fill: $bg;
+      }
+    }
+    @media (min-width: 1025px) {
+      right: 10px;
+    }
+    @media (min-width: 1500px) {
+      width: 53px;
+      height: 53px;
+      top: -10px;
+      svg {
+        width: 22px;
+      }
+    }
+  }
+
+  .modal-card-desk {
+    display: none;
+
+    @media (min-width: 769px) {
+      display: flex;
+      line-height: 1;
+      min-width: 301px;
+      min-height: 54px;
+    }
+  }
+
+  .modal-card-header {
+    display: flex;
+    height: 32px;
+    justify-content: flex-end;
+    align-items: center;
+
+    span {
+      color: $text;
+      margin-right: 0.5rem;
+    }
+
+    div[role='button'] {
+      position: relative;
+      display: flex;
+      align-self: flex-end;
+      align-items: center;
+      background-color: $main;
+      height: 32px;
+      width: 32px;
+      right: 0;
+      top: 0;
+      border-radius: 0;
+
+      svg {
+        width: 16px;
+        height: 16px;
+        // stroke: $contrast;
+        stroke-width: 2px;
+        user-select: none;
+
+        @media (min-width: 1024px) {
+          margin-left: 4px;
+        }
+      }
+
+      &:hover {
+        color: $main;
+        background-color: $contrast !important;
+        // svg {
+        //   stroke: $main !important;
+        // }
+      }
+
+      > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 16px;
+        height: 16px;
+
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+
+        @media (min-width: 769px) {
+          width: 26px;
+          height: 26px;
+
+          svg {
+            width: 26px;
+            height: 26px;
+          }
+        }
+      }
+
+      @media (min-width: 769px) {
+        height: 48px;
+        width: 48px;
+      }
+    }
+
+    @media (min-width: 769px) {
+      div[role='button'] {
+        position: absolute;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .modal-card-mobile {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+    height: 32px;
+
+    span {
+      font-weight: 400;
+      color: $text;
+      margin-right: 0.5rem;
+    }
+
+    div[role='button'] {
+      width: 32px;
+      height: 32px;
+      margin-right: 0;
+      justify-content: center;
+
+      > div {
+        width: 24px;
+        height: 24px;
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    ul {
+      padding: 0 0.5rem;
+    }
+
+    @media (min-width: 769px) {
+      display: none !important;
+    }
+  }
+
+  .gallery-dots {
+    position: relative;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: default;
+
+    @media (min-width: 769px) {
+      display: none !important;
+    }
+
+    .active {
+      a {
+        height: 100%;
+        background-color: $main;
+      }
+    }
+
+    li {
+      position: relative;
+      display: block;
+      float: left;
+      width: 8px;
+      height: 8px;
+      margin: 0 8px;
+      cursor: pointer;
+
+      a {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border-radius: 50%;
+        text-indent: -999em;
+        cursor: pointer;
+        position: absolute;
+        overflow: hidden;
+        background-color: $nav-dots;
+      }
+    }
+  }
+}
+
+@keyframes anima-seta {
+  from {
+    bottom: 10%;
+  }
+  to {
+    bottom: -10%;
+  }
+}
+
+.section1-wrapper {
+  .swiper-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 6%;
+    height: auto;
+    padding-bottom: 40px;
+    background-size: 94%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  .swipe-message {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+    bottom: 34%;
+  }
+
+  .swiper-wrapper {
+    @media (min-width: 768px) {
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .swiper-container {
+      bottom: 12%;
+      background-size: 98%;
+      padding-bottom: 25px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .swiper-container {
+      bottom: 12%;
+      padding-bottom: 40px;
+      background-size: 94%;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 136px;
+    min-width: 136px;
+    @media (min-width: 1025px) {
+      max-width: 150px;
+      min-width: 150px;
+    }
+    @media (min-width: 1500px) {
+      max-width: 222px;
+    }
+  }
+}
+
+.header-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 7%;
+  text-align: center;
+  font-weight: 500;
+  color: #eadfd3;
+  width: 96%;
+  svg {
+    fill: #eadfd3;
+  }
+  h2 {
+    max-width: 100%;
+    font-weight: 500;
+    @include rem('font-size', 12px);
+    @include rem('line-height', 16px);
+  }
+  & > div {
+    display: flex;
+    justify-content: center;
+    & > div {
+      & > div {
+        background-color: #eadfd3;
+        height: 1px;
+        width: 90%;
+        margin: 10px auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    top: 2%;
+    white-space: nowrap;
+    width: auto;
+    h2 {
+      @include rem('font-size', 14px);
+      @include rem('line-height', 16px);
+    }
+    & > div {
+      &:last-child {
+        margin-top: 10px;
+      }
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    top: 2%;
+    h2 {
+      @include rem('font-size', 16px);
+      @include rem('line-height', 20px);
+    }
+    & > div {
+      &:last-child {
+        margin-top: 30px;
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    top: 2%;
+    h2 {
+      @include rem('font-size', 18px);
+      @include rem('line-height', 24px);
+    }
+    & > div {
+      &:last-child {
+        margin-top: 30px;
+      }
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    top: 2%;
+    h2 {
+      @include rem('font-size', 26px);
+      @include rem('line-height', 32px);
+    }
+    & > div {
+      &:last-child {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+.highlight {
+  position: absolute;
+  color: #eadfd3;
+  top: 38vh;
+  h1 {
+    letter-spacing: 4px;
+    @include rem('font-size', 32px);
+    @include rem('line-height', 42px);
+    text-decoration: underline;
+    text-align: left;
+    padding-left: 6%;
+  }
+  @media screen and (min-width: 768px) {
+    position: relative;
+    top: 70px;
+    right: 136px;
+    h1 {
+      letter-spacing: 8px;
+      @include rem('font-size', 28px);
+      @include rem('line-height', 32px);
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    position: relative;
+    top: 100px;
+    right: 160px;
+    h1 {
+      letter-spacing: 8px;
+      @include rem('font-size', 28px);
+      @include rem('line-height', 32px);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    position: relative;
+    top: 100px;
+    right: 176px;
+    h1 {
+      letter-spacing: 8px;
+      @include rem('font-size', 32px);
+      @include rem('line-height', 38px);
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    position: relative;
+    top: 110px;
+    right: 240px;
+    h1 {
+      letter-spacing: 9px;
+      @include rem('font-size', 46px);
+      @include rem('line-height', 52px);
+    }
+  }
+  @media screen and (min-width: 2200px) {
+    position: relative;
+    top: 130px;
+    right: 180px;
+    h1 {
+      left: 44%;
+      letter-spacing: 12px;
+      @include rem('font-size', 76px);
+      @include rem('line-height', 82px);
+    }
+  }
+}

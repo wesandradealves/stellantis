@@ -1,0 +1,153 @@
+@use "../../styles/variables" as var;
+@use "../../styles/mixins" as mixin;
+
+$ww: 1920;
+
+.container {
+  width: 195px;
+  height: 170px;
+  position: relative;
+  border: 1px solid var.$white;
+  margin-right: 16px;
+  cursor: pointer;
+  border-top-right-radius: 30px;
+  overflow: hidden;
+
+  .content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &::before {
+      content: "+";
+      width: 38px;
+      height: 38px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1;
+      background-color: var.$orangeBF4;
+      color: var.$black;
+      font-size: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+  }
+
+  &.active,
+  &:hover {
+    border-color: var.$orangeBF4;
+    border-bottom: 8px solid var.$orangeBF4;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 15px;
+
+    h4 {
+      font-family: var.$bold;
+      font-size: 22px;
+      color: var.$orangeBF4;
+      line-height: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 2px rgba(0,0,0,0.55);
+    }
+
+    p {
+      font-family: var.$light;
+      font-size: 22px;
+      color: var.$white;
+      line-height: 24px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  $ww: 1920;
+  
+  .container {
+    width: mixin.calcSizeVw(195, $ww);
+    height: mixin.calcSizeVw(170, $ww);
+    margin-right: mixin.calcSizeVw(16, $ww);
+    border-top-right-radius: mixin.calcSizeVw(30, $ww);
+
+    .content {
+      &::before {
+        content: "+";
+        width: mixin.calcSizeVw(38, $ww);
+        height: mixin.calcSizeVw(38, $ww);
+        top: mixin.calcSizeVw(10, $ww);
+        right: mixin.calcSizeVw(10, $ww);
+        font-size: mixin.calcSizeVw(35, $ww);
+      }
+    }
+
+    &.active,
+    &:hover {
+      border-bottom: mixin.calcSizeVw(8, $ww) solid var.$orangeBF4;
+    }
+
+    .text {
+      padding: mixin.calcSizeVw(15, $ww);
+
+      h4 {
+        font-size: mixin.calcSizeVw(22, $ww);
+        line-height: mixin.calcSizeVw(22, $ww);
+      }
+
+      p {
+        font-size: mixin.calcSizeVw(22, $ww);
+        line-height: mixin.calcSizeVw(24, $ww);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .container {
+    width: 120px;
+    height: 105px;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .container {
+    width: calc(100% - 10px);
+    margin-right: 5px;
+    height: 2px;
+    background-color: var.$gray;
+    outline-color: transparent !important;
+    border: none;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    .content {
+      &::before {
+        display: none;
+      }
+    }
+
+    &.active {
+      background-color: var.$yellow;
+    }
+
+    span,
+    p,
+    img {
+      display: none !important;
+    }
+  }
+}

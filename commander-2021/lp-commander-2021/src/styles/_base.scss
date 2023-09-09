@@ -1,0 +1,83 @@
+html {
+  font-size: $font-size-default;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $font-default;
+  background-color: $bg;
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: $font-default;
+  font-weight: normal;
+  height: 100%;
+  width: auto;
+  line-height: 1.4;
+  margin: 0;
+  background-color: $bg;
+  color: $text;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $font-default;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+a:not(.no-anchor),
+*[role='button']:not(.no-anchor) {
+  cursor: pointer;
+}
+
+.no-anchor {
+  user-select: none;
+}
+
+.cta {
+  z-index: 51;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+  background-color: $text;
+  transform: translateY(100%);
+  padding: 10px;
+  div[role='button'],
+  a {
+    min-width: 280px;
+  }
+
+  @media screen and (min-width: 769px) {
+    display: none;
+    justify-content: flex-end;
+    div[role='button'] {
+      @include rem('font-size', 18px);
+      padding: 12px 24px;
+    }
+  }
+
+  &.show {
+    transform: translateY(0);
+  }
+}

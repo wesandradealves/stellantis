@@ -1,0 +1,21 @@
+<svg id="Grupo_4056" data-name="Grupo 4056" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="87" height="28.481" viewBox="0 0 87 28.481">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3fb06f"/>
+      <stop offset="1" stop-color="#aac156"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_2395" data-name="Grupo 2395">
+    <ellipse id="Elipse_29" data-name="Elipse 29" cx="8.95" cy="8.889" rx="8.95" ry="8.889" fill="url(#linear-gradient)"/>
+    <ellipse id="Elipse_30" data-name="Elipse 30" cx="8.95" cy="8.889" rx="8.95" ry="8.889" transform="translate(69.101)" fill="url(#linear-gradient)"/>
+  </g>
+  <g id="Grupo_2396" data-name="Grupo 2396" transform="translate(20.616 2.052)">
+    <rect id="Retângulo_1263" data-name="Retângulo 1263" width="4.061" height="26.429" rx="2.03" fill="url(#linear-gradient)"/>
+    <rect id="Retângulo_1264" data-name="Retângulo 1264" width="4.061" height="26.429" rx="2.03" transform="translate(6.951)" fill="url(#linear-gradient)"/>
+    <rect id="Retângulo_1265" data-name="Retângulo 1265" width="4.061" height="26.429" rx="2.03" transform="translate(13.903)" fill="url(#linear-gradient)"/>
+    <rect id="Retângulo_1266" data-name="Retângulo 1266" width="4.061" height="26.429" rx="2.03" transform="translate(20.854)" fill="url(#linear-gradient)"/>
+    <rect id="Retângulo_1267" data-name="Retângulo 1267" width="4.061" height="26.429" rx="2.03" transform="translate(27.805)" fill="url(#linear-gradient)"/>
+    <rect id="Retângulo_1268" data-name="Retângulo 1268" width="4.061" height="26.429" rx="2.03" transform="translate(34.757)" fill="url(#linear-gradient)"/>
+    <rect id="Retângulo_1269" data-name="Retângulo 1269" width="4.061" height="26.429" rx="2.03" transform="translate(41.708)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

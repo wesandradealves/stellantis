@@ -1,0 +1,107 @@
+@use "../../../../styles/variables" as var;
+@use "../../../../styles/mixins" as mixin;
+
+.container {
+  width: calc(100% - 40px);
+  position: relative;
+  margin: 0 auto;
+
+  .image {
+    width: 100%;
+
+    span,
+    img {
+      width: 100% !important;
+      height: 100% !important;
+      display: block !important;
+      position: relative !important;
+    }
+  }
+
+  .content {
+    padding: 90px 0 60px 0;
+    color: #302B27;
+
+    h4 {
+      font-family: var.$blackFont;
+      color: #A13F22;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-family: var.$regular;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 500;
+    }
+
+    a {
+      margin-top: 40px;
+    }
+  }
+
+  .wrapperButton {
+    padding: 0 20px 0 20px;
+
+    a {
+      margin-bottom: 26px;
+    }
+  }
+
+  .swiperWrapperNavigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 65vw;
+
+    button:first-of-type {
+      left: 24px;
+    }
+
+    button:last-child {
+      transform: inherit;
+    }
+  }
+
+  .swiperPagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+
+    .swiperPaginationBullet {
+      width: 10px;
+      height: 10px;
+      background-color: #D5CCC3;
+      border-radius: 50%;
+      margin: 0 3px;
+
+      &.active {
+        background-color: #A13F22;
+      }
+    }
+  }
+
+  .swiperButton {
+    top: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    .swiperWrapperNavigation {
+      top: 68vw;
+
+      button:first-child {
+        margin-left: 0px;
+      }
+    }
+  }
+}

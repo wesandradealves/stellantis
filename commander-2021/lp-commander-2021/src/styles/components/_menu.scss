@@ -1,0 +1,209 @@
+.wrapper-menu {
+  background-color: #fff;
+  height: 100%;
+  overflow-y: auto;
+  width: 100%;
+  header {
+    overflow-y: auto;
+    display: block;
+    z-index: 30;
+    &.opened {
+      height: 100%;
+      overflow: hidden;
+    }
+    &.sticky {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 30;
+    }
+    .header-jeep {
+      height: 50px;
+      display: flex;
+      background-color: #000;
+      justify-content: center;
+      padding: 10px;
+      transition: all 0.2s linear;
+      svg {
+        fill: #fff;
+      }
+      .btn-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.opened {
+          background-color: #fff;
+          svg {
+            stroke: $main;
+          }
+        }
+      }
+      @media screen and (min-width: 1025px) {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 1025px) {
+      &.sticky {
+        position: inherit;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 2;
+      }
+    }
+  }
+  nav.main-nav {
+    transition: all 0.35s linear;
+    background-color: #fff;
+    z-index: 50;
+    width: 80%;
+    padding-left: 20px;
+    padding-top: 0px;
+    min-height: 100%;
+    right: 100%;
+    height: 100%;
+    top: 50px;
+    overflow: auto;
+    position: absolute;
+
+    & > a > svg {
+      display: none;
+    }
+    &.opened {
+      right: 20%;
+      padding-bottom: 20px;
+    }
+    @media screen and (min-width: 1025px) {
+      transition: none;
+      top: inherit;
+      right: inherit;
+      overflow-y: auto;
+      height: 100%;
+      position: fixed;
+      width: 224px;
+      box-shadow: 0px 10px 6px #00000052;
+      padding-left: 24px;
+      padding-top: 36px;
+      & > a > svg {
+        display: block;
+      }
+      &.opened {
+        right: inherit;
+      }
+    }
+    svg {
+      fill: $jeep;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        padding: 1vh 0;
+        position: relative;
+        &:after {
+          content: '';
+          width: 102px;
+          position: absolute;
+          left: 0;
+          bottom: 0px;
+          border-radius: 2px;
+          height: 1px;
+          background-color: #3d3d3d;
+          opacity: 0.3;
+        }
+        a {
+          @include rem('font-size', 13px);
+          letter-spacing: 1.2px;
+          font-weight: bold;
+          color: $menuText;
+          text-decoration: none;
+          text-transform: uppercase;
+          &.main-item {
+            color: #575757;
+          }
+          &:hover:not(.main-item):not(.main-subitem) {
+            color: $main;
+          }
+          &.active-menu:not(.main-item):not(.main-subitem) {
+            color: $main;
+          }
+        }
+        &.submenu {
+          &.active-header-menu {
+            > a {
+              color: $main;
+            }
+          }
+          &:after {
+            display: none;
+          }
+          ul {
+            padding-top: 12px;
+            li {
+              span {
+                display: inline-block;
+                padding-right: 5px;
+              }
+              &:first-child:before {
+                content: '';
+                width: 102px;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                border-radius: 2px;
+                height: 1px;
+                opacity: 0.3;
+                background-color: $menuText;
+              }
+              a {
+                text-transform: inherit;
+                &.active-sub-menu {
+                  color: $main;
+                }
+              }
+              &:last-child {
+                &:after {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .menu-links-wrapper {
+      .base-button {
+        margin-top: 8px;
+        &:first-child {
+          margin-top: 16px;
+        }
+        &:last-child {
+          margin-bottom: 48px;
+        }
+
+        &.inverted {
+          background-color: transparent;
+          color: $main;
+          border: 2px solid $main;
+          svg {
+            stroke: $main;
+          }
+
+          &:hover {
+            background-color: $main;
+            color: white;
+            svg {
+              stroke: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

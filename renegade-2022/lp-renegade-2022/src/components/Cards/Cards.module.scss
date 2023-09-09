@@ -1,0 +1,193 @@
+@import '@styles/theme', '@styles/mixins', '@styles/animations';
+
+.positionFix {
+  top: unset;
+  bottom: 0%;
+  //bottom: toRem(36);
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  padding: 0 clamp(30px, 5vw, 6rem);
+  width: 100%;
+  height: max-content;
+  @media (min-width: 1439px) {
+    bottom: 3%;
+  }
+}
+
+.container {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 15% 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 20px;
+  grid-template-areas: '. .';
+  justify-items: start;
+  align-items: start;
+  width: 100%;
+  height: max-content;
+}
+
+// First Layer
+.unitaryBox {
+  margin: 0 clamp(0.2rem, 0.6vw, 0.5rem) 0px 0px;
+
+  // Second Layer
+  .externalBox {
+    width: clamp(60px, 8vw, 120px);
+    height: clamp(60px, 8vw, 120px);
+    padding: 2px;
+    position: relative;
+    transition: background-color $transition-time-quick
+      $transition-easing;
+    background-color: $primary;
+    border-radius: $thumb-radius-layout;
+
+    &.selected {
+      background: rgb(63, 176, 111);
+      background: linear-gradient(
+        16deg,
+        #3fb06f 18%,
+        #aac156 100%
+      );
+      padding: 3px;
+
+      .gradient {
+        opacity: 0;
+      }
+    }
+  }
+  // Thirdy Layer
+  .internalBox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: $thumb-radius-layout;
+    overflow: hidden;
+
+    h2 {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      font-size: 12px;
+      font-family: $font;
+      color: $text-primary;
+      margin: 0 0 5px 5px;
+      text-align: left;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.addCross {
+  transition: opacity $transition-time-quick $transition-easing;
+  margin: 0;
+  padding: 0;
+  bottom: 5%;
+  right: 5%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: $primary;
+  z-index: 2;
+  border-radius: 100%;
+  &.selected {
+    background: rgb(63, 176, 111);
+    background: linear-gradient(
+      16deg,
+      #3fb06f 18%,
+      #aac156 100%
+    );
+  }
+
+  &:after {
+    content: '+';
+    font-size: 1.3rem;
+    line-height: 20px;
+    color: $text-primary;
+  }
+}
+
+.scrollCta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  width: 100%;
+  //margin-top: 75px;
+  margin-bottom: 15px;
+
+  &.scrollCtaHorizontal {
+    align-items: center;
+    //padding: 0px;
+
+    p {
+      text-align: center;
+      padding-bottom: 12px;
+    }
+  }
+
+  &.scrollCtaVertical {
+    padding: 20px;
+    align-items: flex-start;
+    bottom: 0px;
+
+    p {
+      position: absolute;
+      left: 0;
+      top: 0;
+      text-align: center;
+      transform: rotate(-90deg);
+      transform-origin: calc(0% + 20px);
+      width: max-content;
+      height: 6px;
+      padding-left: 15px;
+    }
+    div {
+      border: 2px solid red;
+    }
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 62px;
+    svg {
+      @include animationMargin;
+      &:nth-child(1) {
+        animation-delay: 0ms;
+      }
+      &:nth-child(2) {
+        animation-delay: 150ms;
+      }
+      &:nth-child(3) {
+        animation-delay: 300ms;
+      }
+    }
+  }
+
+  svg {
+    margin-bottom: 12px;
+    position: relative;
+  }
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 0px;
+
+  @include xxl {
+    margin-top: 0px;
+  }
+}

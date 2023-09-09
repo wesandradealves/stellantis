@@ -1,0 +1,73 @@
+@import '../../../../src/styles/theme.scss',
+  '../../../../src/styles/mixins.scss';
+
+@function get-vw($target) {
+  $vw-context: (1000 * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+.contentArea {
+  display: flex;
+}
+
+.container {
+  position: relative;
+  min-height: 290px;
+  width: 100%;
+
+}
+
+.content {
+  background-color: #01151d;
+  height: 80%;
+  color: $white;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+
+  h1 {
+    color: $terciary;
+    font-family: 'DIN Next LT Pro Bold';
+    font-size: clamp(1.3rem, 2vw, 2rem);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-family: 'DIN Next LT Pro';
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    font-weight: 300;
+  }
+}
+
+.cta {
+  margin-top: 32px;
+  left: get-vw(580px);
+  display: flex;
+  justify-content: space-between;
+
+  h3 {
+    font-family: 'DIN Next LT Pro';
+    font-weight: 600;
+    font-size: 1.0625rem;
+    letter-spacing: 1px;
+  }
+
+  img {
+    min-height: 4px;
+    width: 8px;
+  }
+}
+
+.image {
+  background-image: url('../../../assets/images/06-banner/desktop/banner-eletrizante@2x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 60%;
+  flex: 1;
+}

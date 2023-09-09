@@ -1,0 +1,5 @@
+Cada slide tem sua respectiva versão desktop e mobile, ex.:
+
+slide1.png e slide1-mobile.png
+
+E para cada item desk e mobile suas respectivas versões 1x, 2x e 3x, mantendo proporção de tamanho na altura e largura.

@@ -1,0 +1,28 @@
+.swiper-container {
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-wrapper {
+  @media (min-width: 768px) {
+    justify-content: center;
+    display: flex;
+  }
+}
+
+.swiper-slide {
+  display: flex;
+  margin-right: 2vw;
+  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+  max-width: 136px;
+  min-width: 136px;
+  @media (min-width: 1025px) {
+    max-width: 150px;
+    min-width: 150px;
+  }
+  @media (min-width: 1500px) {
+    max-width: 222px;
+  }
+}
